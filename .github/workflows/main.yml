@@ -28,8 +28,18 @@ jobs:
            echo "Hello Message1"
            echo "Hello Message1"
            echo "Appication name; ${{ env.APPLICATION_NAME}}" 
+      
+      
       - name: List currnt folder
         run : ls -la
+        
+        
+      - name: Git clone my repo
+        uses: actions/checout@v1
+        
+      - name: List currnt folder
+        run : ls -la
+      
       
   my_deploy:
     runs-on: ubuntu-latest
@@ -43,7 +53,11 @@ jobs:
      - name: Printing Deployment package
        run : echo "Deplyo pakcage name is ${{ env.PACKAGE_NAME}}" 
   
-  
+     - name: Lets test some packages if they are here 1
+       run : aws --version
+       
+     - name: Lets test some packages if they are here 2
+       run : zip
   
   
   
