@@ -1,4 +1,4 @@
-# GitHub Actions Part-1 Basics
+# GitHub Actions 
 
 
 Status of Last Deployment:<br>
